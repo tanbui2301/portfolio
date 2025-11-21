@@ -14,20 +14,14 @@ const Footer = () => {
                 </div>
             </div>
 
-            <div>
+            <div className="text-center sm:flex items-center justify-between border-t border-gray-500 mx-[10%] mt-12 py-6">
                 <p>
-                    
+                    © 2025 Minh Thu Ho. All rights reserved.
                 </p>
 
-                <ul>
+                <ul className="flex items-center justify-center gap-10 sm:mt-0">
                     <li>
-                        <a></a>
-                    </li>
-                    <li>
-                        <a></a>
-                    </li>
-                    <li>
-                        <a></a>
+                        <a target="_blank" href="https://www.linkedin.com/in/minh-thu-ho-68bb9b1ba">LinkedIn</a>
                     </li>
                 </ul>
             </div>

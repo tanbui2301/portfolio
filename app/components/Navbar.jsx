@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 import { assets } from '@/assets/assets';
 
-const Navbar = () => {
+const Navbar = ({ isDarkMode, toggleTheme }) => {
 
     const [isScroll, setIsScroll] = useState(false);
 
@@ -18,22 +18,28 @@ const Navbar = () => {
     const [openSubMenu, setOpenSubMenu] = useState(false);
 
     useEffect(() => {
-        window.addEventListener('scroll', () => {
-            if(scrollY > 50) {
-                setIsScroll(true)
+        const handleScroll = () => {
+            if(window.scrollY > 50) {
+                setIsScroll(true);
             } else {
-                setIsScroll(false)
+                setIsScroll(false);
             }
-        })
-    },[])
+        };
+
+        window.addEventListener("scroll", handleScroll);
+
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+        };
+    }, []);
 
     return (
         <>
-        <div className='fixed top-0 right-0 w-11/12 -z-10 translate-y-[-80%]'>
+        <div className='fixed top-0 right-0 w-11/12 -z-10 translate-y-[-80%] pointer-events-none dark:hidden'>
             <Image src={assets.header_background} alt='Header background' className='w-full' />
         </div>
 
-            <nav className={`w-full fixed px-5 lg:px-8 xl:px-[8%] py-4 flex items-center justify-between z-50 ${isScroll ? "bg-white/50 backdrop-blur-lg shadow-sm" : ""}`}>
+            <nav className={`w-full fixed px-5 lg:px-8 xl:px-[8%] py-4 flex items-center justify-between z-[50] ${isScroll ? "bg-white/50 backdrop-blur-lg shadow-sm" : ""}`}>
                 <a href='#top'>
                     <Image src={assets.logo} className='w-35 cursor-pointer mr-14' alt='logo' />
                 </a>
@@ -67,11 +73,7 @@ const Navbar = () => {
 
                 <div className='flex items-center gap-5'>
                     <a href='#contact' className='hidden lg:flex items-center gap-3 px-10 border border-gray-500 rounded-full ml-4 py-3 font-serif'>Contact <Image src={assets.upper_right_arrow_icon} alt='' className='w-6' /></a>
-
-                    <button>
-                        <Image src={assets.moon_icon} alt='Moon' className='w-6 ' />
-                    </button>
- 
+                    
                     <button className='block md:hidden ml-3' onClick={openMenu}>
                         <Image src={assets.menu_black} alt='Black menu' className='w-6'/>
                     </button>
