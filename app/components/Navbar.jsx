@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 import { assets } from '@/assets/assets';
+import Link from 'next/link';
 
 const Navbar = ({ isDarkMode, toggleTheme }) => {
 
@@ -46,7 +47,7 @@ const Navbar = ({ isDarkMode, toggleTheme }) => {
 
                 <ul className='hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-11 py-3 bg-white/50 shadow-sm leading-6'>
                     <li><a className='font-serif whitespace-nowrap' href='#top'>Home</a></li>
-                    <li><a className='font-serif whitespace-nowrap' href='#resume-awards'>Resumé/Awards</a></li>
+                    <li><Link className='font-serif whitespace-nowrap' href='/resume-awards'>Resumé/Awards</Link></li>
                     <li><a className='font-serif whitespace-nowrap' href='#philosophy'>Philosophy</a></li>
                     <li className='relative group'>
                         <a className='font-serif hover:text-gray-500 flex items-center cursor-pointer' href='#curriculum-pedagory'>Curriculum & Pedagogy ▾</a>
@@ -73,7 +74,7 @@ const Navbar = ({ isDarkMode, toggleTheme }) => {
 
                 <div className='flex items-center gap-5'>
                     <a href='#contact' className='hidden lg:flex items-center gap-3 px-10 border border-gray-500 rounded-full ml-4 py-3 font-serif'>Contact <Image src={assets.upper_right_arrow_icon} alt='' className='w-6' /></a>
-                    
+
                     <button className='block md:hidden ml-3' onClick={openMenu}>
                         <Image src={assets.menu_black} alt='Black menu' className='w-6'/>
                     </button>
