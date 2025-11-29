@@ -5,10 +5,10 @@ import { motion } from 'motion/react';
 
 const About = () => {
     return (
-        <motion.div id='about' className='w-full px-[12%] py-10 scroll-mt-20'
+        <motion.div id='about' className='w-full px-[12%] py-32 scroll-mt-20'
         initial={{opacity: 0}}
         whileInView={{opacity: 1}}
-        transition={{duration: 1}}>
+        transition={{duration: 0.6}}>
 
             <motion.h4 
             initial={{opacity: 0, y: -20}}

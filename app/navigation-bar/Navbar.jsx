@@ -3,7 +3,7 @@ import Image from 'next/image';
 import { assets } from '@/assets/assets';
 import Link from 'next/link';
 
-const Navbar = ({ isDarkMode, toggleTheme }) => {
+const Navbar = () => {
 
     const [isScroll, setIsScroll] = useState(false);
 
@@ -41,14 +41,14 @@ const Navbar = ({ isDarkMode, toggleTheme }) => {
         </div>
 
             <nav className={`w-full fixed px-5 lg:px-8 xl:px-[8%] py-4 flex items-center justify-between z-[50] ${isScroll ? "bg-white/50 backdrop-blur-lg shadow-sm" : ""}`}>
-                <a href='#top'>
+                <Link href='/'>
                     <Image src={assets.logo} className='w-35 cursor-pointer mr-14' alt='logo' />
-                </a>
+                </Link>
 
                 <ul className='hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-11 py-3 bg-white/50 shadow-sm leading-6'>
-                    <li><a className='font-serif whitespace-nowrap' href='#top'>Home</a></li>
+                    <li><Link className='font-serif whitespace-nowrap' href='/'>Home</Link></li>
                     <li><Link className='font-serif whitespace-nowrap' href='/resume-awards'>Resumé/Awards</Link></li>
-                    <li><a className='font-serif whitespace-nowrap' href='#philosophy'>Philosophy</a></li>
+                    <li><a className='font-serif whitespace-nowrap' href='/philosophy'>Philosophy</a></li>
                     <li className='relative group'>
                         <a className='font-serif hover:text-gray-500 flex items-center cursor-pointer' href='#curriculum-pedagory'>Curriculum & Pedagogy ▾</a>
                         
@@ -73,7 +73,7 @@ const Navbar = ({ isDarkMode, toggleTheme }) => {
                 </ul>
 
                 <div className='flex items-center gap-5'>
-                    <a href='#contact' className='hidden lg:flex items-center gap-3 px-10 border border-gray-500 rounded-full ml-4 py-3 font-serif'>Contact <Image src={assets.upper_right_arrow_icon} alt='' className='w-6' /></a>
+                    <Link href='/#contact' className='hidden lg:flex items-center gap-3 px-10 border border-gray-500 rounded-full ml-4 py-3 font-serif'>Contact <Image src={assets.upper_right_arrow_icon} alt='' className='w-6' /></Link>
 
                     <button className='block md:hidden ml-3' onClick={openMenu}>
                         <Image src={assets.menu_black} alt='Black menu' className='w-6'/>
@@ -88,9 +88,9 @@ const Navbar = ({ isDarkMode, toggleTheme }) => {
                         <Image src={assets.close_black} alt='Close black' className='w-5 cursor-pointer' />
                     </div>
 
-                    <li><a className='font-serif' onClick={closeMenu} href='#top'>Home</a></li>
-                    <li><a className='font-serif' onClick={closeMenu} href='#resume-awards'>Resumé/Awards</a></li>
-                    <li><a className='font-serif' onClick={closeMenu} href='#philosophy'>Philosophy</a></li>
+                    <li><Link className='font-serif' onClick={closeMenu} href='/'>Home</Link></li>
+                    <li><Link className='font-serif' onClick={closeMenu} href='/resume-awards'>Resumé/Awards</Link></li>
+                    <li><a className='font-serif' onClick={closeMenu} href='/philosophy'>Philosophy</a></li>
                     
                     {/* ----- Hybrid link + dropdown ----- */}
                     <li className='flex flex-col'>
@@ -132,7 +132,7 @@ const Navbar = ({ isDarkMode, toggleTheme }) => {
                     </li>
 
                     <li><a className='font-serif' onClick={closeMenu} href='#CPL'>Continuous Professional Learning</a></li>
-                    <li><a className='font-serif' onClick={closeMenu} href='#contact'>Contact me</a></li>
+                    <li><a className='font-serif' onClick={closeMenu} href='/#contact'>Contact me</a></li>
                 </ul>
 
             </nav>

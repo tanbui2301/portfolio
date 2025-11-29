@@ -10,7 +10,7 @@ const Header = () => {
             initial={{scale: 0}}
             whileInView={{scale: 1}}
             transition={{duration: 0.8, type: 'spring', stiffness: 100}}>
-                <Image src={assets.profile_img} alt="Profile image" className="rounded-full w-32"/>
+                <Image src={assets.profile_img} alt="Profile image" className="mt-48 rounded-full w-32"/>
             </motion.div>
 
             <motion.h3

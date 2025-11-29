@@ -12,6 +12,8 @@ const Footer = () => {
                     <Image src={assets.footer_mail_icon} alt="footer mail icon" className="w-6" />
                     thuho2705@gmail.com
                 </div>
+                <br></br>
+                <p>Disclaimer: All the content presented in the portfolio is original, accurate, current, and cited where necessary.</p>
             </div>
 
             <div className="text-center sm:flex items-center justify-between border-t border-gray-500 mx-[10%] mt-12 py-6">
