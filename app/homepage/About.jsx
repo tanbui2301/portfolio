@@ -46,14 +46,14 @@ const About = () => {
                 transition={{duration: 0.6, delay: 0.8}}
                 className='flex-1'>
                     <p>
-                        My name is Minh Thu Ho, 
-                        I am currently studying Early Childhood Education Diploma at Humber Polytechnic. 
-                        Throughout my studies journey, I have gained various of hands-on experiences from doing placements and professional knowledges to work with children, families and community.
+                        My name is Minh Thu Ho, I am currently studying Early Childhood Education Diploma at Humber Polytechnic. 
+                        Throughout my studies journey, I have gained various of hands-on experiences from doing work placements, part time job related to professional, and professional knowledges to work with children, families and community.
                     </p>
                     <br></br>
                     <p>
-                        During the time when I was in my home country, I am an aunt of a lovely and energetic 4-year-old nephew. 
-                        From playing and taking care of him when his parents are working, I have raised the passion and motivation to take care of children as my future career. 
+                        During the time when I was in my home country, I am an English teaching assistance for a small centre provide English course for children from 6 to 12. 
+                        Moreover, I am an aunt of a lovely and energetic 4-year-old nephew. 
+                        From playing and taking care of him and other children in the centre when their parents are working, I have raised the passion and motivation to take care of children as my future career. 
                         From that, this portfolio will be a reflection for my whole studies journey to become a wonderful educator that dedicated to creating an inclusive and equitable learning environment that children can feel safe and welcomed. 
                     </p>
                 </motion.div>

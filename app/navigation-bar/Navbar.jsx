@@ -50,7 +50,7 @@ const Navbar = () => {
                     <li><Link className='font-serif whitespace-nowrap' href='/resume-awards'>Resumé/Awards</Link></li>
                     <li><a className='font-serif whitespace-nowrap' href='/philosophy'>Philosophy</a></li>
                     <li className='relative group'>
-                        <a className='font-serif hover:text-gray-500 flex items-center cursor-pointer' href='#curriculum-pedagory'>Curriculum & Pedagogy ▾</a>
+                        <Link className='font-serif hover:text-gray-500 flex items-center cursor-pointer' href='/professional-experiences'>Professional Experiences ▾</Link>
                         
                         {/* Dropdown Menu */}
                         <ul className='absolute top-full left-0 bg-[#ffffff] text-black mt-3 rounded shadow-lg w-45 opacity-0 invisible group-hover:opacity-100 group-hover:visible transaction-all duration-200'>
@@ -58,18 +58,20 @@ const Navbar = () => {
                                 <a className='font-serif' href='#RUIP'>Resources Used In Practice</a>
                             </li>
                             <li className='px-4 py-2 hover:bg-gray-300 cursor-pointer'>
-                                <a className='font-serif' href='#pedagogical-doc'>Pedagogical Documentation</a>
+                                <Link className='font-serif' href='/pedagogical-docs'>Pedagogical Documentation</Link>
+                            </li>
+                            <li className='px-4 py-2 hover:bg-gray-300 cursor-pointer'>
+                                <Link className='font-serif' href='/responsive-plans'>Responsive Inclusive Plans</Link>
                             </li>
                             <li className='px-4 py-2 hover:bg-gray-300 cursor-pointer'>
                                 <a className='font-serif' href='#learn-story'>Learning Story</a>
                             </li>
                             <li className='px-4 py-2 hover:bg-gray-300 cursor-pointer'>
-                                <a className='font-serif' href='#meaning-artifact'>Meaningful Artifacts</a>
+                                <Link className='font-serif' href='/meaning-artifacts'>Meaningful Artifacts</Link>
                             </li>
                         </ul>
                     </li>
-                    <li><a className='font-serif' href='#CPL'>Continuous Professional Learning</a></li>
-                    <li><a className='font-serif' href='#references'>References</a></li>
+                    <li><a className='font-serif whitespace-nowrap' href='#CPL'>Continuous Professional Learning</a></li>
                 </ul>
 
                 <div className='flex items-center gap-5'>
@@ -90,12 +92,12 @@ const Navbar = () => {
 
                     <li><Link className='font-serif' onClick={closeMenu} href='/'>Home</Link></li>
                     <li><Link className='font-serif' onClick={closeMenu} href='/resume-awards'>Resumé/Awards</Link></li>
-                    <li><a className='font-serif' onClick={closeMenu} href='/philosophy'>Philosophy</a></li>
+                    <li><Link className='font-serif' onClick={closeMenu} href='/philosophy'>Philosophy</Link></li>
                     
                     {/* ----- Hybrid link + dropdown ----- */}
                     <li className='flex flex-col'>
                         <div className='flex justify-between items-center'>
-                            <a className='font-serif flex-1' onClick={closeMenu} href='#curriculum-pedagory'>Curriculum & Pedagogy</a>
+                            <Link className='font-serif flex-1' onClick={closeMenu} href='/professional-experiences'>Professional Experiences</Link>
 
                             {/* --- Arrow button toggles dropdown --- */}
                             <button onClick={(e) => {
@@ -115,9 +117,14 @@ const Navbar = () => {
                                     </a>
                                 </li>
                                 <li>
-                                    <a className='font-serif' onClick={closeMenu} href='#pedagogical-doc'>
+                                    <Link className='font-serif' onClick={closeMenu} href='/pedagogical-docs'>
                                         Pedagogical Documentation
-                                    </a>
+                                    </Link>
+                                </li>
+                                <li>
+                                    <Link className='font-serif' onClick={closeMenu} href='/responsive-plans'>
+                                        Responsive Inclusive Plans
+                                    </Link>
                                 </li>
                                 <li>
                                     <a className='font-serif' onClick={closeMenu} href='learn-story'>
@@ -125,7 +132,7 @@ const Navbar = () => {
                                     </a>
                                 </li>
                                 <li>
-                                    <a className='font-serif' onClick={closeMenu} href='meaning-artifact'>Meaningful Artifacts</a>
+                                    <Link className='font-serif' onClick={closeMenu} href='/meaning-artifacts'>Meaningful Artifacts</Link>
                                 </li>
                             </ul>
                         )}
