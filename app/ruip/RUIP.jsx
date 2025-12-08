@@ -21,7 +21,7 @@ const RUIP = () => {
             whileInView={{opacity: 1, x: 0}}
             transition={{duration: 0.6, delay: 0.3}}
             className="text-left text-2xl italic mt-12 text-amber-600 ">
-                How does learning happen? Ontario's Pedagogy for Early Years
+                Excerpts from E.L.E.C.T
             </motion.h4>
 
             <motion.div
