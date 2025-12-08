@@ -55,7 +55,7 @@ const Navbar = () => {
                         {/* Dropdown Menu */}
                         <ul className='absolute top-full left-0 bg-[#ffffff] text-black mt-3 rounded shadow-lg w-45 opacity-0 invisible group-hover:opacity-100 group-hover:visible transaction-all duration-200'>
                             <li className='px-4 py-2 hover:bg-gray-300 cursor-pointer'>
-                                <a className='font-serif' href='#RUIP'>Resources Used In Practice</a>
+                                <Link className='font-serif' href='/ruip'>Resources Used In Practice</Link>
                             </li>
                             <li className='px-4 py-2 hover:bg-gray-300 cursor-pointer'>
                                 <Link className='font-serif' href='/pedagogical-docs'>Pedagogical Documentation</Link>
@@ -64,14 +64,14 @@ const Navbar = () => {
                                 <Link className='font-serif' href='/responsive-plans'>Responsive Inclusive Plans</Link>
                             </li>
                             <li className='px-4 py-2 hover:bg-gray-300 cursor-pointer'>
-                                <a className='font-serif' href='#learn-story'>Learning Story</a>
+                                <Link className='font-serif' href='/learning-story'>Learning Story</Link>
                             </li>
                             <li className='px-4 py-2 hover:bg-gray-300 cursor-pointer'>
                                 <Link className='font-serif' href='/meaning-artifacts'>Meaningful Artifacts</Link>
                             </li>
                         </ul>
                     </li>
-                    <li><a className='font-serif whitespace-nowrap' href='#CPL'>Continuous Professional Learning</a></li>
+                    <li><Link className='font-serif whitespace-nowrap' href='/cpl'>Continuous Professional Learning</Link></li>
                 </ul>
 
                 <div className='flex items-center gap-5'>
@@ -112,9 +112,9 @@ const Navbar = () => {
                         {openSubMenu && (
                             <ul className='p-4 mt-2 flex flex-col gap-2 text-sm bg-rose-100'>
                                 <li>
-                                    <a className='font-serif' onClick={closeMenu} href='#RUIP'>
+                                    <Link className='font-serif' onClick={closeMenu} href='/ruip'>
                                         Resources Used In Practice
-                                    </a>
+                                    </Link>
                                 </li>
                                 <li>
                                     <Link className='font-serif' onClick={closeMenu} href='/pedagogical-docs'>
@@ -127,9 +127,9 @@ const Navbar = () => {
                                     </Link>
                                 </li>
                                 <li>
-                                    <a className='font-serif' onClick={closeMenu} href='learn-story'>
+                                    <Link className='font-serif' onClick={closeMenu} href='/learning-story'>
                                         Learning Story
-                                    </a>
+                                    </Link>
                                 </li>
                                 <li>
                                     <Link className='font-serif' onClick={closeMenu} href='/meaning-artifacts'>Meaningful Artifacts</Link>
@@ -138,8 +138,8 @@ const Navbar = () => {
                         )}
                     </li>
 
-                    <li><a className='font-serif' onClick={closeMenu} href='#CPL'>Continuous Professional Learning</a></li>
-                    <li><a className='font-serif' onClick={closeMenu} href='/#contact'>Contact me</a></li>
+                    <li><Link className='font-serif' onClick={closeMenu} href='/cpl'>Continuous Professional Learning</Link></li>
+                    <li><Link className='font-serif' onClick={closeMenu} href='/#contact'>Contact me</Link></li>
                 </ul>
 
             </nav>
